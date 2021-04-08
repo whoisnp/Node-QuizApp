@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-APP</title>
+</head>
+<body>
+    <h1>May Node and Express be with you.</h1>
+
+    <form action="/questions" method="POST">
+        <input type="text" placeholder="Question" name="question">
+        <input type="text" placeholder="option" name="option1" data-number="1">
+        <input type="text" placeholder="option" name="option2" data-number="2">
+        <input type="text" placeholder="option" name="option3" data-number="3">
+        <input type="text" placeholder="option" name="option4" data-number="4">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Output</h2>
+
+    <ul class="question">
+        <% console.log(question) %>
+        <% for(var i=0; i<question.length; i++){ %>
+            <li class="question">
+                <div><%= question[i].question %></div>
+                <div><%= question[i].option1 %></div>
+                <div><%= question[i].option2 %></div>
+                <div><%= question[i].option3 %></div>
+                <div><%= question[i].option4 %></div>
+            </li>
+        <% } %>     
+    </ul>
+
+    
+</body>
+</html>
